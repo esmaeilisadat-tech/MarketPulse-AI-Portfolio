@@ -17,6 +17,8 @@ Evidence review date: 4 November 2026. This summary is documentation for a priva
 
 ## Fresh selected tests
 
+**Update, November 2026:** the full suite now runs on GitHub Actions with 1,117 passed, 0 failed, 1 skipped (see README). The 4 November entry below is kept as the earlier, narrower local check.
+
 66 passed, 2 skipped, 0 failed on 4 November 2026 in 7.19 seconds. Two plugin assertion-rewrite warnings occurred. Three test files covered graph contracts, price-refresh safety and news-dataset behavior. Python socket connections were blocked. Local environment-file loading was disabled for these tests. The graph entry point redirected its default checkpoint location into a temporary directory. No model inference or provider requests were performed. PostgreSQL tests skipped because no isolated test database was configured.
 
 This is a selected local run against the available working tree. It is not a claim about the complete test suite, PR checks, production integrity or live service performance. Private detailed receipts remain outside this showcase.
