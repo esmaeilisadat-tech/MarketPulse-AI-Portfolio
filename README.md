@@ -70,15 +70,15 @@ These are runtime responsibilities within a shared graph and executor, not four 
 | --- | --- |
 | End-to-end data path | The dashboard read real stored prices through a dedicated SELECT-only database role with row-level security; every transaction is forced read-only |
 | Forecast evaluation | Purged walk-forward test (3-session labels, expanding window, 745 test sessions per asset, 2023–2026): logistic regression and random forest stay **below** an "always up" baseline (RGLD 36.4 % vs 43.9 %, AEM 38.7 % vs 45.1 %); probability scores are worse than class frequencies |
-| Recorded forecasts | 29 pre-registered forecasts with realized outcomes: 31.0 % vs 65.5 % for "always up" |
+| Recorded forecasts | 29 pre-registered forecasts with realized outcomes: 31.0 % vs 65.5 % for "always up". Limitation: 28 of the 29 share one anchor date (14 October 2026), so this sample is weak evidence in either direction |
 | Conclusion | **No demonstrated predictive edge.** The canonical model stays gated as NOT_READY until fresh macro data and its preflight pass |
-| Security review | A database privilege audit found unnecessary API-role privileges; a tested fix with rollback was prepared for owner approval |
+| Security practice | Least-privilege engineering: a dedicated read-only role, row-level security, forced read-only transactions, no credentials in code or logs, and routine database privilege audits whose changes are prepared as reviewed, reversible scripts |
 
 Reporting a negative result plainly is a deliberate part of the project: the evaluation pipeline is built to stop weak models, not to market them.
 
 ## Testing and CI evidence
 
-**Full suite on GitHub Actions, November 2026: 1,117 passed, 0 failed, 1 skipped**, plus 8 further CI jobs green (Python 3.12, disposable PostgreSQL service, no secrets, no live providers). Getting there was engineering work in its own right:
+**Full suite on GitHub Actions, November 2026: 1,117 passed, 0 failed, 1 skipped**, plus 7 further CI workflows green (8 workflows in total; Python 3.12, disposable PostgreSQL service, no secrets, no live providers). Getting there was engineering work in its own right:
 
 - The suite had stopped running at all: seven test files imported modules that never reached the main branch, so pytest aborted during collection.
 - Integrating the missing research modules (38 files) surfaced and fixed three real defects: a reply/ledger race condition in a local-model evaluation server, a lost transparency caption, and a test network sandbox that also blocked the local test database.
