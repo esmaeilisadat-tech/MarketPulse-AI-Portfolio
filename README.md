@@ -72,7 +72,7 @@ These are runtime responsibilities within a shared graph and executor, not four 
 | Forecast evaluation | Purged walk-forward test (3-session labels, expanding window, 745 test sessions per asset, 2023–2026): logistic regression and random forest stay **below** an "always up" baseline (RGLD 36.4 % vs 43.9 %, AEM 38.7 % vs 45.1 %); probability scores are worse than class frequencies |
 | Recorded forecasts | 29 pre-registered forecasts with realized outcomes: 31.0 % vs 65.5 % for "always up". Limitation: 28 of the 29 share one anchor date (14 October 2026), so this sample is weak evidence in either direction |
 | Conclusion | **No demonstrated predictive edge.** The canonical model stays gated as NOT_READY until fresh macro data and its preflight pass |
-| Security practice | Least-privilege engineering: a dedicated read-only role, row-level security, forced read-only transactions, no credentials in code or logs, and routine database privilege audits whose changes are prepared as reviewed, reversible scripts |
+| Security practice | Least-privilege engineering: a dedicated read-only role, row-level security, forced read-only transactions, no credentials in code or logs, and database privilege audits whose changes are prepared as reviewed, reversible scripts |
 
 Reporting a negative result plainly is a deliberate part of the project: the evaluation pipeline is built to stop weak models, not to market them.
 
