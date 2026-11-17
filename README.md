@@ -66,13 +66,13 @@ These are runtime responsibilities within a shared graph and executor, not four 
 
 ## Testing and CI evidence
 
-**Local verification on 4 November 2026: 66 passed, 2 skipped, 0 failed** across three selected test files. The scope covered graph routing and repeat-execution boundaries, price-refresh safety and news-dataset contracts. Real network access was blocked, graph checkpoints used a disposable directory and production connections were unavailable. The two PostgreSQL-dependent tests were skipped. Two pytest plugin rewrite warnings occurred. This was not a full-suite run or live-provider validation.
+**Verification update (17 November 2026):** The private project's release-acceptance record reports successful CI checks for PRs #40 and #41 (9/9 checks on each), and local full-suite results of **1,140 passed, 0 failed, 1 skipped** after integration of PR #42. The #42 pushed commits skipped CI; the local result must not be presented as a fresh CI pass. The skipped test requires a retained real-model evaluation result. Earlier focused testing on 4 November yielded 66 passed and 2 skipped. Offline fixture success is not evidence of live autonomous-agent reliability or production deployment.
 
-The private project contains a GitHub Actions workflow that declares unit and PostgreSQL integration tests for pushes and pull requests. No green CI badge or recent remote success is asserted. See [evidence and limits](docs/CAPABILITIES_AND_TESTING.md).
+The portfolio contains independently authored summaries rather than the private test suite. See the [public evidence update](docs/RESEARCH_STATUS_2026-11-17.md) for scope and limitations.
 
 ## Dashboard screenshots
 
-The private Streamlit dashboard provides research and evaluation views. **No approved public dashboard screenshot is included.** Existing screens may contain licensed news or operational data. A future screenshot requires an owner-approved synthetic-only session, visible demo labeling and a separate image audit. The architecture and presentation can be used without screenshots.
+The private Streamlit project now consolidates its research views into one root dashboard (port 8502), including a **Research Sandbox** for a price-only experiment. A separate legacy view (8503) remains temporarily available pending owner confirmation. A restricted, SELECT-only database reader was tested with real stored data, while some sections still display limited-access notices. **No approved public dashboard screenshot is included.** Existing screens may contain licensed news or operational data; any future image requires a synthetic-only, owner-approved session and a separate image audit.
 
 ## Skills demonstrated
 
@@ -85,9 +85,15 @@ The private Streamlit dashboard provides research and evaluation views. **No app
 
 ## Limitations and roadmap
 
-Predictive skill remains unproven. Agent quality and evaluator reliability need further work. Live provider operation depends on fresh authorization, account rights and quota evidence. News Impact modeling readiness does not authorize training.
+**Predictive skill has not been demonstrated.** The 17 November private evaluation reports 31.0% accuracy for 29 recorded experimental forecasts versus 65.5% for an always-UP baseline; 28 of the 29 share one anchor date, so independent forward evidence is extremely limited. Historical price-only walk-forward tests for RGLD and AEM also remained below simple majority/always-UP baselines. These are research findings, not evidence of a profitable forecasting model. Canonical forecasting remains `NOT_READY` because indicator data are stale. Live agent research, paid providers, NLP backlog processing and production data refreshes remain approval-gated.
 
 Future work includes more independent forward observations, stronger evaluator negative controls, stricter feature-availability audits, reproducible deployment checks and an approved synthetic dashboard demonstration. These research items do not prevent presenting the existing engineering work in job applications.
+
+## November 2026 research and delivery update
+
+The private project incorporated a consolidated dashboard, a controlled Research Sandbox, additional offline four-role research tests, a selective database-reader audit, data-freshness diagnosis, and documented model comparisons. Operations and security changes that require production approval remain **proposed, not executed**. The public repository does not host the application, its private implementation, or live data access.
+
+- [Research status, quantitative evidence and limitations (17 November 2026)](docs/RESEARCH_STATUS_2026-11-17.md)
 
 ## Portfolio material
 
