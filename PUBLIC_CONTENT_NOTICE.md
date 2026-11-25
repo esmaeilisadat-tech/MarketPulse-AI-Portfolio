@@ -1,9 +1,9 @@
-# Portfolio content and rights
+# Public content, provenance and rights
 
-This directory contains newly authored descriptions and editable presentation material about a private research project. It contains no implementation source, production observations, model artifacts, provider responses, third-party news text or operational connection details.
+This repository presents newly authored public research summaries and a static self-contained website. The financial-metric values were previously disclosed in the portfolio's date-scoped evidence; the 25 November engineering updates are based on reported local private-source receipts. They are not independent CI or live-production measurements.
 
-No third-party images, logos, screenshots, fonts or news excerpts are bundled. Technology names identify the tools used and do not imply endorsement. Presentation text names a locally available system font but does not distribute a font file.
+The private implementation, original Git histories, databases, providers, stored article content, private LLM traces, screenshots of real account data, credentials, internal URLs, commercial model binaries and third-party copyrighted material are excluded. Synthetic figures and fixtures are explicitly described as such. The static page has no analytics, remote scripts, CDN, fonts or images and does not connect to any provider. Technology names are nominative and imply no endorsement.
 
-The underlying implementation remains private. This draft does not grant a license to that implementation, datasets or third-party services. No open-source license has been selected for the showcase. The owner must review rights, attribution obligations and licensing before publication. Educational-origin material is described only through newly written summaries. No course assets are redistributed.
+Before public release, verify ownership, permission and attribution for every file. No license to private code or underlying datasets is granted. If no license is selected for the public docs/site, default copyright law applies; add an explicit reviewed license only if the owner chooses one.
 
-This is a portfolio research prototype. It provides no financial advice, trading execution or guarantee of forecast quality, factual completeness or agent reliability.
+Not investment advice, a trading product, live financial information, an independently verified reliable model or a production deployment.
