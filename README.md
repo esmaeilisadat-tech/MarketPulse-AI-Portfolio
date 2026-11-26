@@ -1,12 +1,27 @@
-# MarketPulse AI | Applied AI & ML Engineering
+# MarketPulse AI | End-to-End AI Engineering Portfolio
 
-**Multi-agent financial research · Machine learning · Data engineering · RAG · Quantitative evaluation**
+**Agentic AI · LLM/RAG · FastAPI REST APIs · Data Engineering · Machine Learning · Docker · CI/CD**
 
 [Explore the bilingual portfolio](index.html) · [Architecture](docs/ARCHITECTURE.md) · [Latest research evidence](docs/RESEARCH_STATUS_2026-11-26.md) · [Presentation](presentation/PRESENTATION.md) · [English/German career profile](career/PROJECT_DESCRIPTIONS_EN_DE.md)
 
 MarketPulse AI is an end-to-end AI/ML research project exploring how market data, economic indicators and financial news can support evidence-based analysis. Its focus is reproducible engineering, rigorous model evaluation and responsible AI—not trading signals or investment recommendations.
 
 This public repository is a curated portfolio case study of a separate private implementation. It contains no private source mirror, credentials, licensed news payloads or raw research datasets.
+
+## AI engineering, backend APIs & MLOps
+
+| Engineering capability | Implemented work |
+|---|---|
+| **Backend / REST API** | FastAPI, Pydantic request/response validation, OpenAPI schema, health/readiness endpoints, research query and evaluation endpoints; explicit offline and local-RAG modes |
+| **LLM application engineering** | LangGraph orchestration, local Ollama/Llama inference, Chroma vector retrieval, embeddings, citation validation, bounded tool execution and abstention |
+| **API integrations & ETL** | Market-data and financial-news provider adapters, HTTP request limits, retry/error classification, normalization, deduplication and PostgreSQL persistence |
+| **CI/CD & automation** | GitHub Actions workflow definitions, scheduled ingestion design, read-only smoke tests, execution summaries and sanitized audit artifacts; guarded local PowerShell test and ingestion runners |
+| **Containerization & testing** | Docker build/start and HTTP verification for the synthetic API, disposable PostgreSQL 18 integration tests, pytest, browser checks and recorded Giskard contract evaluation |
+| **Security & reliability** | Credential isolation, input validation, least-privilege/RLS design, request budgets, process timeouts, evidence checks and reproducible execution receipts |
+
+**API surface:** GET health/readiness, status, source and evaluation routes, OpenAPI documentation; POST research query with typed inputs. The demonstration is loopback-only and does not expose live forecasts, production database writes or unrestricted jobs.
+
+**Delivery evidence:** Docker, HTTP and browser checks were executed locally; the latest supplied regression log reports 1,515 passing tests. GitHub Actions workflows are implemented but cloud CI is currently disabled and successful continuous deployment is not claimed. Local LLM answer quality remains unvalidated; the recorded benchmark failed its acceptance threshold.
 
 ## Research at a glance — 26 November 2026
 
@@ -63,7 +78,7 @@ For methodology, measured limitations and evidence status, see [the dated resear
 
 ## Technology stack
 
-Python · pandas · NumPy · scikit-learn · XGBoost · LightGBM · PostgreSQL · SQLAlchemy · LangGraph · ChromaDB · Ollama/Llama · NLP · Streamlit · FastAPI · pytest · Docker
+Python · pandas · NumPy · scikit-learn · XGBoost · LightGBM · PostgreSQL · SQLAlchemy · LangGraph · ChromaDB · Ollama/Llama · NLP · Streamlit · FastAPI · Pydantic · OpenAPI · pytest · Docker · GitHub Actions · PowerShell
 
 ## Current status
 
@@ -73,7 +88,7 @@ Next research priorities: prospective point-in-time data collection, validated n
 
 ## Kurzprofil (Deutsch)
 
-MarketPulse AI ist ein KI- und ML-Forschungsprojekt zur Analyse von Finanzmarktdaten, Wirtschaftsindikatoren und Nachrichten. Der Schwerpunkt liegt auf Datenpipelines, agentenbasierter Recherche, RAG, nachvollziehbarer Modellvalidierung und risikobewussten Backtests. Fünf ML-Modellfamilien wurden für 14 Assets und fünf Prognosehorizonte untersucht. Ein statistisch belastbarer Prognosevorteil wurde bislang nicht nachgewiesen.
+MarketPulse AI ist ein KI- und ML-Forschungsprojekt zur Analyse von Finanzmarktdaten, Wirtschaftsindikatoren und Nachrichten. Der Schwerpunkt liegt auf End-to-End AI Engineering: REST-APIs mit FastAPI und Pydantic, agentenbasierte LLM-Workflows, RAG, Datenpipelines, Docker, automatisierte Tests, CI/CD-Workflows und nachvollziehbare Modellvalidierung. Fünf ML-Modellfamilien wurden für 14 Assets und fünf Prognosehorizonte untersucht. Ein statistisch belastbarer Prognosevorteil wurde bislang nicht nachgewiesen.
 
 ## Privacy and responsible publication
 
