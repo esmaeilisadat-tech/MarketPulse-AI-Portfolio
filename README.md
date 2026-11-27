@@ -1,6 +1,6 @@
 # MarketPulse AI | End-to-End AI Engineering Portfolio
 
-**Agentic AI · LLM/RAG · FastAPI REST APIs · Data Engineering · Machine Learning · Docker · CI/CD**
+**Agentic AI · LLM/RAG · FastAPI REST APIs · Data Engineering · Machine Learning · Docker · n8n · MCP · CI/CD**
 
 [Explore the bilingual portfolio](index.html) · [Architecture](docs/ARCHITECTURE.md) · [Latest research evidence](docs/RESEARCH_STATUS_2026-11-26.md) · [Presentation](presentation/PRESENTATION.md) · [English/German career profile](career/PROJECT_DESCRIPTIONS_EN_DE.md)
 
@@ -15,6 +15,7 @@ This public repository is a curated portfolio case study of a separate private i
 | **Backend / REST API** | FastAPI, Pydantic request/response validation, OpenAPI schema, health/readiness endpoints, research query and evaluation endpoints; explicit offline and local-RAG modes |
 | **LLM application engineering** | LangGraph orchestration, local Ollama/Llama inference, Chroma vector retrieval, embeddings, citation validation, bounded tool execution and abstention |
 | **API integrations & ETL** | Market-data and financial-news provider adapters, HTTP request limits, retry/error classification, normalization, deduplication and PostgreSQL persistence |
+| **Workflow automation (n8n/MCP)** | Self-hosted visual workflows, FastAPI integration, authorized MCP inspection/manual execution, verified disposable-database NLP run and read-only diagnostics |
 | **CI/CD & automation** | GitHub Actions workflow definitions, scheduled ingestion design, read-only smoke tests, execution summaries and sanitized audit artifacts; guarded local PowerShell test and ingestion runners |
 | **Containerization & testing** | Docker build/start and HTTP verification for the synthetic API, disposable PostgreSQL 18 integration tests, pytest, browser checks and recorded Giskard contract evaluation |
 | **Security & reliability** | Credential isolation, input validation, least-privilege/RLS design, request budgets, process timeouts, evidence checks and reproducible execution receipts |
@@ -22,6 +23,12 @@ This public repository is a curated portfolio case study of a separate private i
 **API surface:** GET health/readiness, status, source and evaluation routes, OpenAPI documentation; POST research query with typed inputs. The demonstration is loopback-only and does not expose live forecasts, production database writes or unrestricted jobs.
 
 **Delivery evidence:** Docker, HTTP and browser checks were executed locally; the latest supplied regression log reports 1,515 passing tests. GitHub Actions workflows are implemented but cloud CI is currently disabled and successful continuous deployment is not claimed. Local LLM answer quality remains unvalidated; the recorded benchmark failed its acceptance threshold.
+
+## n8n workflow automation — 27 November 2026
+
+A self-hosted Docker-based n8n instance orchestrates seven MarketPulse workflows covering news collection planning, news intelligence, market freshness, system monitoring, database connectivity, pipeline status and NLP testing. MCP integration enables authorized workflow inspection and manual execution. Python/FastAPI retains the business logic; LangGraph retains the four research-agent roles, rather than duplicating them in n8n.
+
+**Verified local milestone:** manual n8n execution 8 processed 10 previously unanalyzed synthetic news records using FinBERT sentiment and topic classification in disposable PostgreSQL: 10 persisted analyses, zero failures, 48.19 seconds. Three records share a headline (eight distinct headlines); content-level deduplication and rerun idempotency remain to be validated. A separate manual connectivity execution verified read-only access to stored news analyses. Live collection, production NLP writes, recurring schedules and end-to-end RAG/agent integration are not yet verified. Forecast NOT_READY; Production NO-GO.
 
 ## Research at a glance — 26 November 2026
 
@@ -55,6 +62,8 @@ Prediction records reuse observations across models and horizons; they are not i
 
 ```mermaid
 flowchart TD
+    O[n8n operational orchestration] -. bounded jobs and diagnostics .-> A
+    O -. news workflow .-> B
     A[Market and macro data] --> C[Validation and timestamp checks]
     B[Financial news] --> D[Four-role research graph]
     D --> E[NLP and evidence-grounded retrieval]
@@ -78,7 +87,7 @@ For methodology, measured limitations and evidence status, see [the dated resear
 
 ## Technology stack
 
-Python · pandas · NumPy · scikit-learn · XGBoost · LightGBM · PostgreSQL · SQLAlchemy · LangGraph · ChromaDB · Ollama/Llama · NLP · Streamlit · FastAPI · Pydantic · OpenAPI · pytest · Docker · GitHub Actions · PowerShell
+Python · pandas · NumPy · scikit-learn · XGBoost · LightGBM · PostgreSQL · SQLAlchemy · LangChain · LangGraph · n8n · MCP · ChromaDB · Ollama/Llama · NLP · Streamlit · FastAPI · Pydantic · OpenAPI · pytest · Docker · GitHub Actions · PowerShell
 
 ## Current status
 
@@ -88,7 +97,7 @@ Next research priorities: prospective point-in-time data collection, validated n
 
 ## Kurzprofil (Deutsch)
 
-MarketPulse AI ist ein KI- und ML-Forschungsprojekt zur Analyse von Finanzmarktdaten, Wirtschaftsindikatoren und Nachrichten. Der Schwerpunkt liegt auf End-to-End AI Engineering: REST-APIs mit FastAPI und Pydantic, agentenbasierte LLM-Workflows, RAG, Datenpipelines, Docker, automatisierte Tests, CI/CD-Workflows und nachvollziehbare Modellvalidierung. Fünf ML-Modellfamilien wurden für 14 Assets und fünf Prognosehorizonte untersucht. Ein statistisch belastbarer Prognosevorteil wurde bislang nicht nachgewiesen.
+MarketPulse AI ist ein KI- und ML-Forschungsprojekt zur Analyse von Finanzmarktdaten, Wirtschaftsindikatoren und Nachrichten. Der Schwerpunkt liegt auf End-to-End AI Engineering: REST-APIs mit FastAPI und Pydantic, agentenbasierte LLM-Workflows, RAG, Datenpipelines, Docker, n8n-Workflow-Automatisierung, MCP-Integration, automatisierte Tests, CI/CD-Workflows und nachvollziehbare Modellvalidierung. Fünf ML-Modellfamilien wurden für 14 Assets und fünf Prognosehorizonte untersucht. Ein statistisch belastbarer Prognosevorteil wurde bislang nicht nachgewiesen.
 
 ## Privacy and responsible publication
 
