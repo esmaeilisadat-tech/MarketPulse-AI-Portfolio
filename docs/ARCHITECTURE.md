@@ -4,6 +4,8 @@ This is a **conceptual description of a privately implemented research system**,
 
 ```mermaid
 flowchart TD
+    O[n8n workflow orchestration via MCP] -. bounded execution .-> P
+    O -. news pipeline .-> N
     P[Approved market observations] --> V[Data quality and temporal checks]
     V --> F[Feature research and ML baselines]
     F --> R[Stored predictions and independent outcome evaluation]
@@ -15,6 +17,10 @@ flowchart TD
     A --> U
     D[Fixed synthetic portfolio fixtures] --> API[Bounded read-only FastAPI demo]
 ```
+
+## Operational orchestration
+
+The private local development environment uses self-hosted n8n in Docker with MCP-enabled workflow inspection and manual execution. FastAPI exposes bounded Python services; LangGraph remains responsible for research-agent coordination. A verified manual run processed ten synthetic news records with FinBERT and topic classification in disposable PostgreSQL (ten persisted analyses, zero failures, 48.19 seconds). Production scheduling, live intake and end-to-end RAG integration remain unverified.
 
 ## System boundaries
 
