@@ -4,13 +4,13 @@
 
 **MarketPulse AI | AI/ML & Research Engineering Portfolio**
 
-Engineered a private Python/PostgreSQL financial-research platform incorporating point-in-time feature validation, chronological ML baselines, a four-role LangGraph workflow, Chroma retrieval, Streamlit views and a bounded synthetic FastAPI demonstration. Implemented local regression/security checks and documented model-quality failures transparently. **Research/portfolio — not Production.**
+Engineered a private Python/PostgreSQL financial-research platform incorporating point-in-time feature validation, chronological ML baselines, a four-role LangGraph workflow, Chroma retrieval, Streamlit views and a bounded synthetic FastAPI demonstration. Integrated self-hosted n8n workflow automation and MCP-based execution; verified FinBERT/topic processing of ten synthetic records in disposable PostgreSQL. Implemented local regression/security checks and documented model-quality failures transparently. **Research/portfolio — not Production.**
 
 ## Deutsch — Lebenslauf
 
 **MarketPulse AI | KI-/ML- und Research-Engineering-Portfolio**
 
-Entwicklung einer privaten Forschungsplattform mit Python und PostgreSQL, zeitbewusster Datenvalidierung, chronologischen ML-Benchmarks, Vier-Rollen-Workflow mit LangGraph, Chroma-Retrieval, Streamlit und einer begrenzten synthetischen FastAPI-Demo. Schwerpunkte: reproduzierbare lokale Tests, sicherer Datenzugriff und transparente Bewertung auch negativer Modellergebnisse. **Forschungsprojekt, kein Produktivsystem.**
+Entwicklung einer privaten Forschungsplattform mit Python und PostgreSQL, zeitbewusster Datenvalidierung, chronologischen ML-Benchmarks, Vier-Rollen-Workflow mit LangGraph, Chroma-Retrieval, Streamlit und einer begrenzten synthetischen FastAPI-Demo. Integration von selbst gehostetem n8n und MCP zur Workflow-Orchestrierung; erfolgreicher lokaler NLP-Test mit zehn synthetischen Nachrichten in einer isolierten PostgreSQL-Datenbank. Schwerpunkte: reproduzierbare lokale Tests, sicherer Datenzugriff und transparente Bewertung auch negativer Modellergebnisse. **Forschungsprojekt, kein Produktivsystem.**
 
 ## Accurate claims for interviews
 
@@ -19,6 +19,8 @@ Entwicklung einer privaten Forschungsplattform mit Python und PostgreSQL, zeitbe
 - Bounded HTTP/provider interactions and privacy-conscious UI
 - Local PostgreSQL/Docker/browser tests with explicit limits
 - Honest negative Llama evaluation: **0/20** valid answers in the attempted answerable sample
+
+- n8n/MCP workflow automation, FastAPI service integration and verified local NLP execution
 
 ## Claims to avoid
 
